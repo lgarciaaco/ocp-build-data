@@ -1,0 +1,15 @@
+content:
+  source:
+    git:
+      branch:
+        # target: release-{MAJOR}.{MINOR}
+        target: spec-file
+      url: git@github.com:lgarciaaco/stargz-snapshotter.git
+      web: https://github.com/lgarciaaco/stargz-snapshotter
+    specfile: stargz-snapshotter.spec
+name: stargz-snapshotter
+targets:
+- rhaos-{MAJOR}.{MINOR}-rhel-8-candidate
+- rhaos-{MAJOR}.{MINOR}-rhel-9-candidate
+owners:
+- svanka@redhat.com

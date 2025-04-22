@@ -16,6 +16,13 @@ distgit:
 delivery:
   # Maps to honeybadger repo_name
   repo_name: ose-kube-proxy
+konflux:
+  cachi2:
+    packages:
+      install:
+        - conntrack-tools
+        - iptables
+        - nftables
 enabled_repos:
 - rhel-9-baseos-rpms
 - rhel-9-appstream-rpms

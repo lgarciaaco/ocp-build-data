@@ -23,6 +23,10 @@ content:
       match: "ENV CI_RPM_SVC=base-MAJOR-MINOR-rhelX.ocp.svc"
       replacement: "ENV CI_RPM_SVC=base-{MAJOR}-{MINOR}-rhel8.ocp.svc"
 
+konflux:
+  cachi2:
+    lockfile: false
+
 from:
   stream: rhel-8-golang-{GO_LATEST}
 labels:

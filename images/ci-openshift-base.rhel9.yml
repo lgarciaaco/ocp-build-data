@@ -22,6 +22,10 @@ content:
       - id: rhel-9-server-ose
         baseurl: http://base-{MAJOR}-{MINOR}-rhel9.ocp.svc/rhel-9-server-ose
 
+konflux:
+  cachi2:
+    lockfile:
+      disabled: true
 from:
   member: openshift-enterprise-base-rhel9
 labels:

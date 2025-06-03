@@ -21,6 +21,10 @@ cachito:
       requirements_files:
       - requirements.cachito
       - requirements-build.cachito
+konflux:
+  cachi2:
+    lockfile:
+      enabled: true
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: ironic-container

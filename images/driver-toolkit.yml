@@ -17,6 +17,10 @@ content:
         target: release-{MAJOR}.{MINOR}
       url: git@github.com:openshift-priv/driver-toolkit.git
       web: https://github.com/openshift/driver-toolkit
+konflux:
+  cachi2:
+    lockfile:
+      enabled: true
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: driver-toolkit-container

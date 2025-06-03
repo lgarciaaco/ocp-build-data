@@ -14,6 +14,10 @@ content:
           member: ci-openshift-build-root-latest.rhel9
     okd_alignment:
       dockerfile: Dockerfile
+konflux:
+  cachi2:
+    lockfile:
+      enabled: true
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: cluster-node-tuning-operator-container

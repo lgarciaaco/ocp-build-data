@@ -9,6 +9,15 @@ content:
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: openshift-enterprise-haproxy-router-container
+konflux:
+  cachi2:
+    lockfile:
+      rpms:
+      - socat
+      - haproxy28
+      - rsyslog
+      - procps-ng
+      - util-linux
 delivery:
   # Maps to honeybadger repo_name
   repo_name: ose-haproxy-router

@@ -13,6 +13,12 @@ content:
         - approved
         - lgtm
         enabled: false
+konflux:
+  cachi2:
+    lockfile:
+      rpms:
+      - dos2unix
+      - util-linux
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: ose-containernetworking-plugins-container

@@ -9,6 +9,11 @@ content:
     ci_alignment:
       streams_prs:
         enabled: false
+konflux:
+  cachi2:
+    lockfile:
+      rpms:
+      - util-linux
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: ose-egress-router-cni-container

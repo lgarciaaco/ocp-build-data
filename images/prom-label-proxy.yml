@@ -17,6 +17,12 @@ content:
         - staff-eng-approved
         ci_build_root:
           member: ci-openshift-build-root-latest.rhel9
+konflux:
+  cachi2:
+    lockfile:
+      rpms:
+      - prometheus-promo
+      - util-linux
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: prom-label-proxy-container

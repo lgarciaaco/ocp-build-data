@@ -18,7 +18,9 @@ konflux:
     lockfile:
       rpms:
       - dos2unix
-      - util-linux
+      - glibc
+      - glibc-common
+      - glibc-langpack
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: ose-containernetworking-plugins-container

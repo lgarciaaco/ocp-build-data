@@ -22,7 +22,6 @@ konflux:
     lockfile:
       rpms:
       - prometheus-promo
-      - util-linux
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: prom-label-proxy-container

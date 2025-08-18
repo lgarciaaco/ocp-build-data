@@ -52,7 +52,6 @@ owners:
 - sdaniele@redhat.com
 - vpunj@redhat.com
 konflux:
-  network_mode: open
   cachi2:
     enabled: false
     lockfile:

@@ -43,13 +43,13 @@ konflux:
   - s390x
   - ppc64le
   cachi2:
-    enabled: true
+    enabled: false
     gomod_version_patch: true
     lockfile:
-      force: true
+      force: false
   sast:
     enabled: true
-  network_mode: hermetic
+  network_mode: open
 
 multi_arch:
   enabled: true

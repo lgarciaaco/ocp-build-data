@@ -49,4 +49,5 @@ owners:
 konflux:
   cachi2:
     lockfile:
+      enabled: false
       inspect_parent: false

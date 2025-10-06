@@ -17,6 +17,8 @@ content:
         auto_label:
         - approved
         - lgtm
+        - jira/valid-reference
+        - verified
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: ose-aws-ebs-csi-driver-container
@@ -37,5 +39,3 @@ name: openshift/ose-aws-ebs-csi-driver-rhel9
 payload_name: aws-ebs-csi-driver
 owners:
 - aos-storage-staff@redhat.com
-konflux:
-  network_mode: open

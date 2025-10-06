@@ -87,12 +87,10 @@ cachito:
 rhcos:
   payload_tags:
     - name: rhel-coreos
-      # temporarily pin rhcos to 4.20 since 4.21 is not available yet
-      rhcos_index_tag: quay.io/openshift-release-dev/ocp-v4.0-art-dev:4.20-{RHCOS_EL_MAJOR}.{RHCOS_EL_MINOR}-node-image
+      rhcos_index_tag: quay.io/openshift-release-dev/ocp-v4.0-art-dev:4.21-{RHCOS_EL_MAJOR}.{RHCOS_EL_MINOR}-node-image
       primary: true
     - name: rhel-coreos-extensions
-      # temporarily pin rhcos to 4.20 since 4.21 is not available yet
-      rhcos_index_tag: quay.io/openshift-release-dev/ocp-v4.0-art-dev:4.20-{RHCOS_EL_MAJOR}.{RHCOS_EL_MINOR}-node-image-extensions
+      rhcos_index_tag: quay.io/openshift-release-dev/ocp-v4.0-art-dev:4.21-{RHCOS_EL_MAJOR}.{RHCOS_EL_MINOR}-node-image-extensions
   enabled_repos:
   - rhel-96-baseos
   - rhel-96-appstream
@@ -189,6 +187,8 @@ public_upstreams:
   public:  "https://github.com/redhat-cne/cloud-event-proxy"
 - private: "https://github.com/openshift-priv/ocp-build-data"
   public: "https://github.com/openshift-eng/ocp-build-data"
+- private: "https://github.com/openshift-priv/assisted-installer-ui"
+  public: "https://github.com/openshift-assisted/assisted-installer-ui"
 
 repos:
 

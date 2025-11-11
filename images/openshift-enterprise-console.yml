@@ -57,6 +57,3 @@ konflux:
     aarch64: linux-d160-m2xlarge/arm64
   cachito:
     mode: emulation
-  cachi2:
-    enabled: true
-  network_mode: open

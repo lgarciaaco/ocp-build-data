@@ -10,8 +10,8 @@ content:
       streams_prs:
         # Label so that this PR automatically merges if tests pass.
         auto_label:
-        - approved
-        - lgtm
+          - approved
+          - lgtm
         enabled: false
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-8
@@ -20,12 +20,12 @@ delivery:
   # Maps to honeybadger repo_name
   repo_name: ose-multus-cni
   delivery_repo_names:
-  - openshift4/ose-multus-cni
+    - openshift4/ose-multus-cni
 for_payload: true
 from:
   builder:
-  - stream: rhel-9-golang
-  - stream: golang
+    - stream: rhel-9-golang
+    - stream: golang
   member: openshift-enterprise-base
 labels:
   io.k8s.description: This is a component of OpenShift Container Platform and provides a meta CNI plugin.
@@ -34,8 +34,4 @@ labels:
 name: openshift/ose-multus-cni
 payload_name: multus-cni
 owners:
-- multus-dev@redhat.com
-konflux:
-  network_mode: open
-  cachi2:
-    enabled: false
+  - multus-dev@redhat.com

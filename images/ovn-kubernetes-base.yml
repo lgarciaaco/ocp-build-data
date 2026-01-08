@@ -15,10 +15,10 @@ distgit:
   component: ose-ovn-kubernetes-base-container
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
 enabled_repos:
-- rhel-9-appstream-rpms
-- rhel-9-baseos-rpms
-- rhel-9-fast-datapath-rpms
-- rhel-9-server-ose-rpms-embargoed
+  - rhel-9-appstream-rpms
+  - rhel-9-baseos-rpms
+  - rhel-9-fast-datapath-rpms
+  - rhel-9-server-ose-rpms-embargoed
 # Generally doozer scan-sources will detect all possible change factors automatically and trigger rebuilds.
 # However, certain images may consume RPMs in unexpected way that make it programmatically impossible to
 # detect they were used.
@@ -27,8 +27,8 @@ scan_sources:
   # We should configure exemptions for those known pins to avoid meaningless rebuild.
   # https://github.com/openshift/ovn-kubernetes/blob/e236fea83d62de8b60b9456770a3e0b525830051/Dockerfile.base#L22
   exempt_rpms:
-  - libreswan
-  - ovn*
+    - libreswan
+    - ovn*
 for_payload: false
 for_release: false
 from:
@@ -40,6 +40,4 @@ labels:
   io.openshift.tags: openshift
 name: openshift/ose-ovn-kubernetes-base
 owners:
-- aos-networking-staff@redhat.com
-konflux:
-  network_mode: open
+  - aos-networking-staff@redhat.com

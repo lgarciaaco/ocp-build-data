@@ -14,26 +14,23 @@ distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-8
   component: openshift-enterprise-operator-sdk-container
 enabled_repos:
-- rhel-8-appstream-rpms
-- rhel-8-baseos-rpms
+  - rhel-8-appstream-rpms
+  - rhel-8-baseos-rpms
 delivery:
   # Maps to honeybadger repo_name
   repo_name: ose-operator-sdk
   delivery_repo_names:
-  - openshift4/ose-operator-sdk-rhel8
+    - openshift4/ose-operator-sdk-rhel8
 for_payload: false
 from:
   builder:
-  - stream: golang
+    - stream: golang
   member: openshift-enterprise-base
 maintainer:
   component: Operator SDK
 name: openshift/ose-operator-sdk-rhel8
 owners:
-- aos-operator-sdk@redhat.com
-- jlanford@redhat.com
-- fabian@redhat.com
-- cmacedo@redhat.com
-# the network mode has to be open until https://issues.redhat.com/browse/ART-14111 is solved to assure this image build without error
-konflux:
-  network_mode: open
+  - aos-operator-sdk@redhat.com
+  - jlanford@redhat.com
+  - fabian@redhat.com
+  - cmacedo@redhat.com

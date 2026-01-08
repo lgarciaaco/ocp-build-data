@@ -15,13 +15,13 @@ distgit:
   component: ose-tools-container
   namespace: containers
 enabled_repos:
-- rhel-8-appstream-rpms
-- rhel-8-baseos-rpms
+  - rhel-8-appstream-rpms
+  - rhel-8-baseos-rpms
 delivery:
   # Maps to honeybadger repo_name
   repo_name: ose-tools
   delivery_repo_names:
-  - openshift4/ose-tools-rhel8
+    - openshift4/ose-tools-rhel8
 for_payload: true
 from:
   member: openshift-enterprise-cli
@@ -33,7 +33,5 @@ labels:
 name: openshift/ose-tools-rhel8
 payload_name: tools
 owners:
-- ccoleman@redhat.com
-- aos-master@redhat.com
-konflux:
-  network_mode: open # https://issues.redhat.com/browse/ART-14111
+  - ccoleman@redhat.com
+  - aos-master@redhat.com

@@ -11,30 +11,28 @@ content:
         ci_build_root:
           stream: rhel-8-golang-ci-build-root
     pkg_managers:
-    - gomod
+      - gomod
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-8
   component: ose-kubevirt-csi-driver-container
 enabled_repos:
-- rhel-8-baseos-rpms
-- rhel-8-appstream-rpms
+  - rhel-8-baseos-rpms
+  - rhel-8-appstream-rpms
 delivery:
   # Maps to honeybadger repo_name
   repo_name: kubevirt-csi-driver
   delivery_repo_names:
-  - openshift4/kubevirt-csi-driver-rhel8
+    - openshift4/kubevirt-csi-driver-rhel8
 for_payload: true
 from:
   builder:
-  - stream: golang
+    - stream: golang
   member: openshift-enterprise-base
 name: openshift/kubevirt-csi-driver-rhel8
 payload_name: kubevirt-csi-driver
 owners:
-- ydayagi@redhat.com
-- cyosef@redhat.com
-- rgolan@redhat.com
-- nargaman@redhat.com
-- dvossel@redhat.com
-konflux:
-  network_mode: open
+  - ydayagi@redhat.com
+  - cyosef@redhat.com
+  - rgolan@redhat.com
+  - nargaman@redhat.com
+  - dvossel@redhat.com

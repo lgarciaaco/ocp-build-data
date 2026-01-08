@@ -2,9 +2,9 @@ content:
   source:
     dockerfile: Dockerfile
     modifications:
-    - action: replace
-      match: "ARG RHEL_VERSION=''"
-      replacement: "ARG RHEL_VERSION='9.2'"
+      - action: replace
+        match: "ARG RHEL_VERSION=''"
+        replacement: "ARG RHEL_VERSION='9.2'"
     # Uncomment the following sections to pin specific kernel versions
     # - action: replace
     #   match: "ARG KERNEL_VERSION=''"
@@ -21,28 +21,19 @@ distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: driver-toolkit-container
 enabled_repos:
-- rhel-9-server-ose-rpms-embargoed
-- rhel-9-baseos-rpms
-- rhel-9-appstream-rpms
-- rhel-9-rt-rpms
+  - rhel-9-server-ose-rpms-embargoed
+  - rhel-9-baseos-rpms
+  - rhel-9-appstream-rpms
+  - rhel-9-rt-rpms
 delivery:
   # Maps to honeybadger repo_name
   repo_name: driver-toolkit
   delivery_repo_names:
-  - openshift4/driver-toolkit-rhel9
+    - openshift4/driver-toolkit-rhel9
 for_payload: true
 from:
   member: openshift-enterprise-base-rhel9
 name: openshift/driver-toolkit-rhel9
 payload_name: driver-toolkit
 owners:
-- edge-sro@redhat.com
-konflux:
-  enabled_repos:
-  - rhel-9-server-ose-rpms-embargoed
-  - rhel-9-baseos-rpms
-  - rhel-9-appstream-rpms
-  - rhel-9-baseos-rpms
-  - rhel-9-appstream-rpms
-  - rhel-9-rt-rpms
-  network_mode: open
+  - edge-sro@redhat.com

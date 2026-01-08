@@ -12,8 +12,8 @@ content:
       streams_prs:
         # Try to have this PR merge as quickly as possible by pre-approving it.
         auto_label:
-        - approved
-        - lgtm
+          - approved
+          - lgtm
         merge_first: true
       # The OpenShift 4.x:base image used by numerous images in CI.
       # The problem is that the actual image is built upstream very infrequently
@@ -43,8 +43,8 @@ distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: openshift-enterprise-base-rhel9-container
 enabled_repos:
-- rhel-9-baseos-rpms
-- rhel-9-appstream-rpms
+  - rhel-9-baseos-rpms
+  - rhel-9-appstream-rpms
 for_payload: false
 for_release: false
 from:
@@ -56,6 +56,4 @@ labels:
   io.openshift.tags: openshift,base
 name: openshift/openshift-enterprise-base-rhel9
 owners:
-- lmeyer@redhat.com
-konflux:
-  network_mode: open
+  - lmeyer@redhat.com

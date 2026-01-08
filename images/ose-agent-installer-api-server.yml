@@ -9,31 +9,54 @@ content:
     ci_alignment:
       streams_prs:
         ci_build_root:
-          stream: rhel-8-golang-ci-build-root
+          stream: rhel-9-golang-ci-build-root
 distgit:
-  branch: rhaos-{MAJOR}.{MINOR}-rhel-8
+  branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: ose-agent-installer-api-server-container
 enabled_repos:
-- rhel-8-baseos-rpms
-- rhel-8-appstream-rpms
-- rhel-8-server-ose-rpms-embargoed
+- rhel-9-baseos-rpms
+- rhel-9-appstream-rpms
+- rhel-9-server-ose-rpms-embargoed
+- rhel-9-codeready-builder-rpms
 delivery:
   # Maps to honeybadger repo_name
   repo_name: ose-agent-installer-api-server
   delivery_repo_names:
-  - openshift4/ose-agent-installer-api-server-rhel8
+  - openshift4/ose-agent-installer-api-server-rhel9
 for_payload: true
 from:
   builder:
-  - stream: golang
-  - member: openshift-enterprise-cli
-  member: openshift-enterprise-base
+  - stream: rhel-9-golang
+  member: openshift-enterprise-base-rhel9
 maintainer:
   component: Installer
   subcomponent: Agent based installation
-name: openshift/ose-agent-installer-api-server-rhel8
+name: openshift/ose-agent-installer-api-server-rhel9
 payload_name: agent-installer-api-server
 owners:
 - ocp-agent-team@redhat.com
 konflux:
-  network_mode: open
+  cachi2:
+    lockfile:
+      modules:
+      - postgresql:16
+      rpms:
+      - binutils
+      - binutils-gold
+      - cpp
+      - elfutils-debuginfod-client
+      - gcc
+      - gcc-c++
+      - libstdc++-devel
+      - glibc
+      - glibc-headers
+      - glibc-devel
+      - kernel-headers
+      - libasan
+      - libatomic
+      - libmpc
+      - libubsan
+      - libxcrypt-devel
+      - make
+      - nmstate-devel
+      - nmstate-libs

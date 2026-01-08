@@ -22,6 +22,7 @@ distgit:
 enabled_repos:
 - rhel-9-baseos-rpms
 - rhel-9-appstream-rpms
+- rhel-9-server-ose-rpms-embargoed
 delivery:
   # Maps to honeybadger repo_name
   repo_name: ose-ptp
@@ -37,4 +38,9 @@ name_in_bundle: ptp
 owners:
 - multus-dev@redhat.com
 konflux:
-  network_mode: open
+  cachi2:
+    lockfile:
+      rpms:
+      - synce4l
+      - libnl3
+      - libnl3-devel

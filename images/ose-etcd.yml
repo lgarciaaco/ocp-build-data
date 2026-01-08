@@ -27,6 +27,8 @@ content:
       streams_prs:
         ci_build_root:
           stream: rhel-9-golang-ci-build-root
+    okd_alignment:
+      dockerfile: Dockerfile.rhel
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: ose-etcd-container
@@ -38,9 +40,7 @@ delivery:
 for_payload: true
 from:
   builder:
-  # IMPORTANT: etcd has unique approval to track its own etcd version. Other repos need arch
-  # approval to diverge from what kube apiserver uses for a given release.
-  - stream: etcd_rhel9_golang
+  - stream: rhel-9-golang
   member: openshift-enterprise-base-rhel9
 labels:
   License: Apache 2.0
@@ -60,4 +60,3 @@ konflux:
   content:
     source:
       dockerfile: Dockerfile.rhel
-  network_mode: open

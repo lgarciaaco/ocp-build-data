@@ -9,6 +9,7 @@ content:
         target: release-{MAJOR}.{MINOR}
       url: git@github.com:openshift-priv/ibm-vpc-block-csi-driver.git
       web: https://github.com/openshift/ibm-vpc-block-csi-driver
+      url_pull: git@github.com:lgarciaaco/ibm-vpc-block-csi-driver.git
     ci_alignment:
       streams_prs:
         commit_prefix: "UPSTREAM: <carry>: "
@@ -39,8 +40,3 @@ name: openshift/ose-ibm-vpc-block-csi-driver-rhel9
 payload_name: ibm-vpc-block-csi-driver
 owners:
 - aos-storage-staff@redhat.com
-konflux:
-  # New issue, need to investigate
-  cachi2:
-    enabled: false
-  network_mode: open # copier: stat: "/go/bin/ibm-vpc-block-csi-driver": no such file or directory

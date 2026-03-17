@@ -1,4 +1,5 @@
 base_only: true
+snapshot_release: true
 content:
   source:
     dockerfile: Dockerfile.base

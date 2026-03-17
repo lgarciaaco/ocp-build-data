@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(for version in 17 16 15 14 13 12)",
+      "Bash(do echo \"Processing version 4.$version:\")",
+      "Bash(git checkout:*)",
+      "Bash(git reset:*)",
+      "Bash(done)",
+      "Bash(do echo:*)",
+      "Bash(git branch:*)",
+      "Bash(git cherry-pick:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh pr create:*)",
+      "Bash(gh pr create --title \"[openshift-4.16] hermetic: flip node-feature-discovery\" --body \"rh-pre-commit.version: 2.3.2\nrh-pre-commit.check-secrets: ENABLED\" --head lgarciaaco:openshift-4.16-hermetic-migrate-node-feature-discovery --base openshift-4.16)",
+      "Bash(gh pr comment:*)"
+    ],
+    "deny": []
+  }
+}

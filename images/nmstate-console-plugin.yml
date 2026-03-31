@@ -12,8 +12,6 @@ content:
           member: ci-openshift-build-root-latest.rhel9
     pkg_managers:
     - npm
-dependents:
-- openshift-kubernetes-nmstate-operator
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: nmstate-console-plugin-container

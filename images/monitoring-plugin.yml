@@ -48,7 +48,18 @@ okd:
     source:
       modifications:
       - action: replace
-        match: RUN make install-frontend-ci
+        match: |
+          ENV CYPRESS_INSTALL_BINARY=0
+          RUN make install-frontend-ci && make build-frontend
         replacement: |
+          ENV CYPRESS_INSTALL_BINARY=0
+          ENV NPM_CONFIG_FETCH_TIMEOUT=600000 NPM_CONFIG_FETCH_RETRIES=5 NPM_CONFIG_FETCH_RETRY_MINTIMEOUT=20000 NPM_CONFIG_FETCH_RETRY_MAXTIMEOUT=120000 NPM_CONFIG_MAXSOCKETS=3
+          RUN make install-frontend-ci && make build-frontend
+      - action: replace
+        match: |
+          COPY Makefile Makefile
+          RUN make install-frontend-ci
+        replacement: |
+          COPY Makefile Makefile
           ENV NPM_CONFIG_FETCH_TIMEOUT=600000 NPM_CONFIG_FETCH_RETRIES=5 NPM_CONFIG_FETCH_RETRY_MINTIMEOUT=20000 NPM_CONFIG_FETCH_RETRY_MAXTIMEOUT=120000 NPM_CONFIG_MAXSOCKETS=3
           RUN make install-frontend-ci

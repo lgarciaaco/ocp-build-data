@@ -41,5 +41,7 @@ payload_name: monitoring-plugin
 owners:
 - team-observability-ui@redhat.com
 konflux:
+  vm_override:
+    aarch64: linux-d160-c4xlarge/arm64
   cachito:
     mode: emulation

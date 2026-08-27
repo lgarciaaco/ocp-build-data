@@ -13,7 +13,7 @@ content:
     dockerfile: images/agent-base/Containerfile
     git:
       branch:
-        target: mta-8.3-agent-base-cachi2-fix
+        target: main
       url: git@github.com:openshift-priv/migtools-mta-agentic-controller.git
       url_pull: https://github.com/lgarciaaco/mta-agentic-controller.git
       web: https://github.com/migtools/mta-agentic-controller

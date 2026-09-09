@@ -12,7 +12,7 @@ content:
     dockerfile: images/agent-base/Containerfile
     git:
       branch:
-        target: ART-23149-goose-dist-stage-ref
+        target: main
       url: git@github.com:openshift-priv/migtools-mta-agentic-controller.git
       url_pull: https://github.com/lgarciaaco/mta-agentic-controller.git
       web: https://github.com/migtools/mta-agentic-controller
